@@ -1,0 +1,65 @@
+#
+# example Makefile to build an executable named myprog from myprog.cpp
+#
+PROG=dining
+RM=rm all
+
+all: $(PROG).cpp
+	@g++ -std=c++11 -Wall -pthread $(PROG).cpp -o $(PROG)
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 2 Philosophers"; \
+	./$(PROG) 2
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 3 Philosophers"; \
+	./$(PROG) 3
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 4 Philosophers"; \
+	./$(PROG) 4
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 5 Philosophers"; \
+	./$(PROG) 5
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 6 Philosophers"; \
+	./$(PROG) 6
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 7 Philosophers; \
+	./$(PROG) 7
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 8 Philosophers"; \
+	./$(PROG) 8
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 9 Philosophers"; \
+	./$(PROG) 9
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 10 Philosophers"; \
+	./$(PROG) 10
+
+#	for threadNo in 1 2 4 8 16 32; do \
+		for sizeNo in 1 2 4 8 16 32; do \
+			@echo "Results of $(PROG) with $$threadNo thread(s)  and $$sizeNo size"; \
+			./$(PROG) $$(($$threadNo)) $$(($$sizeNo)) \
+			echo.; \
+		done \
+	done 
+
+.PHONY: clean
+clean:
+	$(RM) $(PROG)

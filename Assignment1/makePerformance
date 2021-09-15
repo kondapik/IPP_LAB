@@ -1,0 +1,141 @@
+#
+# example Makefile to build an executable named myprog from myprog.cpp
+#
+PROG=performance
+RM=rm all
+
+all: $(PROG).cpp
+	@g++ -std=c++11 -Wall -pthread $(PROG).cpp -o $(PROG)
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 1 thread(s) and 1 size"; \
+	./$(PROG) 1 1
+
+	@echo "Results of $(PROG) with 1 thread(s) and 2 size"; \
+	./$(PROG) 1 2
+
+	@echo "Results of $(PROG) with 1 thread(s) and 4 size"; \
+	./$(PROG) 1 4
+
+	@echo "Results of $(PROG) with 1 thread(s) and 8 size"; \
+	./$(PROG) 1 8
+
+	@echo "Results of $(PROG) with 1 thread(s) and 16 size"; \
+	./$(PROG) 1 16
+
+	@echo "Results of $(PROG) with 1 thread(s) and 32 size"; \
+	./$(PROG) 1 32
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 2 thread(s) and 1 size"; \
+	./$(PROG) 2 1
+
+	@echo "Results of $(PROG) with 2 thread(s) and 2 size"; \
+	./$(PROG) 2 2
+
+	@echo "Results of $(PROG) with 2 thread(s) and 4 size"; \
+	./$(PROG) 2 4
+
+	@echo "Results of $(PROG) with 2 thread(s) and 8 size"; \
+	./$(PROG) 2 8
+
+	@echo "Results of $(PROG) with 2 thread(s) and 16 size"; \
+	./$(PROG) 2 16
+
+	@echo "Results of $(PROG) with 2 thread(s) and 32 size"; \
+	./$(PROG) 2 32
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 4 thread(s) and 1 size"; \
+	./$(PROG) 4 1
+	
+
+	@echo "Results of $(PROG) with 4 thread(s) and 2 size"; \
+	./$(PROG) 4 2
+
+	@echo "Results of $(PROG) with 4 thread(s) and 4 size"; \
+	./$(PROG) 4 4
+
+	@echo "Results of $(PROG) with 4 thread(s) and 8 size"; \
+	./$(PROG) 4 8
+
+	@echo "Results of $(PROG) with 4 thread(s) and 16 size"; \
+	./$(PROG) 4 16
+
+	@echo "Results of $(PROG) with 4 thread(s) and 32 size"; \
+	./$(PROG) 4 32
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 8 thread(s) and 1 size"; \
+	./$(PROG) 8 1
+
+	@echo "Results of $(PROG) with 8 thread(s) and 2 size"; \
+	./$(PROG) 8 2
+
+	@echo "Results of $(PROG) with 8 thread(s) and 4 size"; \
+	./$(PROG) 8 4
+
+	@echo "Results of $(PROG) with 8 thread(s) and 8 size"; \
+	./$(PROG) 8 8
+
+	@echo "Results of $(PROG) with 8 thread(s) and 16 size"; \
+	./$(PROG) 8 16
+
+	@echo "Results of $(PROG) with 8 thread(s) and 32 size"; \
+	./$(PROG) 8 32
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 16 thread(s) and 1 size"; \
+	./$(PROG) 16 1
+
+	@echo "Results of $(PROG) with 16 thread(s) and 2 size"; \
+	./$(PROG) 16 2
+
+	@echo "Results of $(PROG) with 16 thread(s) and 4 size"; \
+	./$(PROG) 16 4
+
+	@echo "Results of $(PROG) with 16 thread(s) and 8 size"; \
+	./$(PROG) 16 8
+
+	@echo "Results of $(PROG) with 16 thread(s) and 16 size"; \
+	./$(PROG) 16 16
+
+	@echo "Results of $(PROG) with 16 thread(s) and 32 size"; \
+	./$(PROG) 16 32
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 32 thread(s) and 1 size"; \
+	./$(PROG) 32 1
+
+	@echo "Results of $(PROG) with 32 thread(s) and 2 size"; \
+	./$(PROG) 32 2
+
+	@echo "Results of $(PROG) with 32 thread(s) and 4 size"; \
+	./$(PROG) 32 4
+
+	@echo "Results of $(PROG) with 32 thread(s) and 8 size"; \
+	./$(PROG) 32 8
+	
+	@echo "Results of $(PROG) with 32 thread(s) and 16 size"; \
+	./$(PROG) 32 16
+
+	@echo "Results of $(PROG) with 32 thread(s) and 32 size"; \
+	./$(PROG) 32 32
+
+#	for threadNo in 1 2 4 8 16 32; do \
+		for sizeNo in 1 2 4 8 16 32; do \
+			@echo "Results of $(PROG) with $$threadNo thread(s)  and $$sizeNo size"; \
+			./$(PROG) $$(($$threadNo)) $$(($$sizeNo)) \
+			echo.; \
+		done \
+	done 
+
+.PHONY: clean
+clean:
+	$(RM) $(PROG)

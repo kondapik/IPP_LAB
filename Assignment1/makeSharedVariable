@@ -1,0 +1,23 @@
+#
+# example Makefile to build an executable named myprog from myprog.cpp
+#
+PROG=shared-variable
+RM=rm all
+
+all: $(PROG).cpp
+	@g++ -std=c++11 -Wall -pthread $(PROG).cpp -o $(PROG)
+
+	for loopval in `seq 1 10`; do \
+		echo "Results of $(PROG) in loop $$loopval"; \
+		./$(PROG) \
+		echo "\n";\
+	done 
+#	loopNo=1; while [[$$loopNo -le 10]]; do\
+		echo "Results of $(PROG) in loop $$loopNo";\
+		./$(PROG) \
+		((loopNo = loopNo + 1)); \
+	done
+
+.PHONY: clean
+clean:
+	$(RM) $(PROG)
