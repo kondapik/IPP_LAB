@@ -105,10 +105,6 @@ all: $(PROG).cpp
 	./$(PROG) 16 10000000 100
 
 	@echo "\n";\
-	
-
-	@echo "Results of $(PROG) with 16 thread(s) and 10000 trapeze(s) and 1000 partition(s)"; \
-	./$(PROG) 16 10000 1000
 
 	@echo "Results of $(PROG) with 16 thread(s) and 1000000 trapeze(s) and 1000 partition(s)"; \
 	./$(PROG) 16 1000000 1000
