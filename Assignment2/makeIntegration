@@ -7,7 +7,7 @@ RM=rm all
 all: $(PROG).cpp
 	@g++ -std=c++11 -Wall -pthread $(PROG).cpp -o $(PROG)
 
-	./$(PROG) -h
+	#./$(PROG) -h
 
 	@echo "\n";\
 	
