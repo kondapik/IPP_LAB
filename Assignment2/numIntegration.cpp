@@ -222,6 +222,6 @@ int main(int argc, char *argv[])
 
     //std::cout << "Finished in " << duration.count() << " seconds (wall clock)." << std::endl;
     //std::cout << "Result with " << maxThreads << " threads and " << maxTrapezes << " trapezes is " << finalResult << ". Calculation time is " << duration.count() << " seconds (wall clock). \n";
-    printf("Result with %ld threads and %ld trapezes is %.15f. Calculation time is %.15f seconds (wall clock). \n",maxThreads, maxTrapezes, finalResult, duration.count());
+    printf("Result with %ld thread(s), %ld trapeze(s) and %ld part(s) is %.15f. Calculation time is %.15f second(s) (wall clock). \n",maxThreads, maxTrapezes, maxParts, finalResult, duration.count());
     return 0;
 }
