@@ -1,0 +1,60 @@
+
+
+Results of sievePrimes with 1 thread(s) and 10000 max value
+Found 1229 primes with 1 thread(s), 10000 maximum value and 1 partition(s) in 0.022940811000000 second(s) (wall clock). 
+Results of sievePrimes with 1 thread(s) and 100000 max value
+Found 9592 primes with 1 thread(s), 100000 maximum value and 1 partition(s) in 2.017580936000000 second(s) (wall clock). 
+Results of sievePrimes with 1 thread(s) and 1000000 max value
+Found 78498 primes with 1 thread(s), 1000000 maximum value and 1 partition(s) in 228.751088294999988 second(s) (wall clock). 
+#@echo "Results of sievePrimes with 1 thread(s) and 10000000 max value"; \
+#./sievePrimes 1 10000000
+
+
+Results of sievePrimes with 2 thread(s) and 10000 max value
+Found 1229 primes with 2 thread(s), 10000 maximum value and 1 partition(s) in 0.007822670000000 second(s) (wall clock). 
+Results of sievePrimes with 2 thread(s) and 100000 max value
+Found 9592 primes with 2 thread(s), 100000 maximum value and 1 partition(s) in 0.465403000000000 second(s) (wall clock). 
+Results of sievePrimes with 2 thread(s) and 1000000 max value
+Found 78498 primes with 2 thread(s), 1000000 maximum value and 1 partition(s) in 54.004791644999997 second(s) (wall clock). 
+#@echo "Results of sievePrimes with 2 thread(s) and 10000000 max value"; \
+#./sievePrimes 2 10000000
+
+
+Results of sievePrimes with 4 thread(s) and 10000 max value
+Found 1229 primes with 4 thread(s), 10000 maximum value and 1 partition(s) in 0.003464717000000 second(s) (wall clock). 
+Results of sievePrimes with 4 thread(s) and 100000 max value
+Found 9592 primes with 4 thread(s), 100000 maximum value and 1 partition(s) in 0.116169673000000 second(s) (wall clock). 
+Results of sievePrimes with 4 thread(s) and 1000000 max value
+Found 78498 primes with 4 thread(s), 1000000 maximum value and 1 partition(s) in 15.020006544999999 second(s) (wall clock). 
+#@echo "Results of sievePrimes with 4 thread(s) and 10000000 max value"; \
+#./sievePrimes 4 10000000
+
+
+Results of sievePrimes with 8 thread(s) and 10000 max value
+Found 1229 primes with 8 thread(s), 10000 maximum value and 1 partition(s) in 0.002724799000000 second(s) (wall clock). 
+Results of sievePrimes with 8 thread(s) and 100000 max value
+Found 9592 primes with 8 thread(s), 100000 maximum value and 1 partition(s) in 0.062624414000000 second(s) (wall clock). 
+Results of sievePrimes with 8 thread(s) and 1000000 max value
+Found 78498 primes with 8 thread(s), 1000000 maximum value and 1 partition(s) in 6.776273823000000 second(s) (wall clock). 
+#@echo "Results of sievePrimes with 8 thread(s) and 10000000 max value"; \
+#./sievePrimes 8 10000000
+
+
+Results of sievePrimes with 16 thread(s) and 10000 max value
+Found 1229 primes with 16 thread(s), 10000 maximum value and 1 partition(s) in 0.002551552000000 second(s) (wall clock). 
+Results of sievePrimes with 16 thread(s) and 100000 max value
+Found 9592 primes with 16 thread(s), 100000 maximum value and 1 partition(s) in 0.021955652000000 second(s) (wall clock). 
+Results of sievePrimes with 16 thread(s) and 1000000 max value
+Found 78498 primes with 16 thread(s), 1000000 maximum value and 1 partition(s) in 3.377932501000000 second(s) (wall clock). 
+#@echo "Results of sievePrimes with 16 thread(s) and 10000000 max value"; \
+#./sievePrimes 16 10000000
+
+
+Results of sievePrimes with 32 thread(s) and 10000 max value
+Found 1229 primes with 32 thread(s), 10000 maximum value and 1 partition(s) in 0.002549584000000 second(s) (wall clock). 
+Results of sievePrimes with 32 thread(s) and 100000 max value
+Found 9592 primes with 32 thread(s), 100000 maximum value and 1 partition(s) in 0.014948866000000 second(s) (wall clock). 
+Results of sievePrimes with 32 thread(s) and 1000000 max value
+Found 78498 primes with 32 thread(s), 1000000 maximum value and 1 partition(s) in 1.209350747000000 second(s) (wall clock). 
+#@echo "Results of sievePrimes with 32 thread(s) and 10000000 max value"; \
+#./sievePrimes 32 10000000
