@@ -1,6 +1,13 @@
 #include <iostream>
 #include <thread>
 #include <string>
+#include <chrono>
+#include <mutex>
+//#include "timer.h"
+
+
+double finalResult;
+std::mutex mutex;
 
 int helpText(char *program)
 {
@@ -23,9 +30,30 @@ int helpText(char *program)
     exit(1);
 }
 
-void workerThread(int threadNo, int maxTrapezes, int size, int mod)
+double getFunctionOut(double x)
 {
-    int startIdx, lastIdx;
+    // double y;
+    // y = (double) 1.0 + x^2;
+    return ((4.0 / (1.0 + x*x)));
+}
+
+double getArea(long blockNo, double width)
+{
+    double x1, x2, y1, y2;
+    x1 = blockNo * width;
+    x2 = x1 + width;
+    y1 = getFunctionOut(x1);
+    y2 = getFunctionOut(x2);
+    
+    return ((std::min(y1,y2)*width) + (0.5*width*std::abs(y1-y2)));
+}
+
+
+void *workerThread(long threadNo, long maxTrapezes, long size, long mod)
+{
+    long startIdx, lastIdx;
+    double mySum = 0.0;
+
     if (mod == 0)
     {
         startIdx = threadNo * size;
@@ -48,17 +76,26 @@ void workerThread(int threadNo, int maxTrapezes, int size, int mod)
         lastIdx = maxTrapezes;
     }
 
-    std::cout << "Thread No: " << threadNo << std::endl;
-    for(int threadIdx = startIdx; threadIdx < lastIdx; threadIdx++)
+    // std::cout << "Thread No: " << threadNo << std::endl;
+    double width = 1.0 / (double) maxTrapezes;
+
+    for(long threadIdx = startIdx; threadIdx < lastIdx; threadIdx++)
     {
-        std::cout << threadIdx << " ";
+        // std::cout << threadIdx << " ";
+        mySum = mySum + getArea(threadIdx, width);
     }
-    std::cout << std::endl;
+
+    mutex.lock();
+    finalResult = finalResult + mySum;
+    mutex.unlock();
+    // std::cout << std::endl;
+
+    return NULL;
 }
 
 int main(int argc, char *argv[])
 {
-    int maxThreads, maxTrapezes, maxParts = 1;
+    long maxThreads, maxTrapezes, maxParts = 1;
     // Print help text if '-h' argument is passed 
     if (argc == 1 || "-h" == std::string(argv[1]) || argc < 3 || argc > 4)
     {
@@ -113,17 +150,33 @@ int main(int argc, char *argv[])
     // std::cout << "maxTrapezes:\t" << maxTrapezes << std::endl;
     // std::cout << "maxParts:\t" << maxParts << std::endl;
 
-    // *** Starting Timer ***
-
-    int blockSize = maxTrapezes / maxThreads;
-    int lastBlocks = maxTrapezes % maxThreads;
+    long blockSize = maxTrapezes / maxThreads;
+    long lastBlocks = maxTrapezes % maxThreads;
 
     // std::cout << "blockSize:\t" << blockSize << std::endl;
     // std::cout << "lastBlocks:\t" << lastBlocks << std::endl;
 
-    for (int threadNo = 0; threadNo < maxThreads; threadNo++)
+    finalResult = 0.0;
+
+    std::thread *threadHandles = new std::thread[maxThreads];
+
+    // *** Starting Timer ***
+     auto start_time = std::chrono::system_clock::now();
+
+    for (long threadNo = 0; threadNo < maxThreads; threadNo++)
     {
-        workerThread(threadNo, maxTrapezes, blockSize, lastBlocks);
+        threadHandles[threadNo] = std::thread(workerThread,threadNo, maxTrapezes, blockSize, lastBlocks);
     }
+
+    for (long threadNo = 0; threadNo < maxThreads; threadNo++)
+    {
+        threadHandles[threadNo].join();
+    }
+
+    std::chrono::duration<double> duration = (std::chrono::system_clock::now() - start_time);
+
+    //std::cout << "Finished in " << duration.count() << " seconds (wall clock)." << std::endl;
+    //std::cout << "Result with " << maxThreads << " threads and " << maxTrapezes << " trapezes is " << finalResult << ". Calculation time is " << duration.count() << " seconds (wall clock). \n";
+    printf("Result with %ld threads and %ld trapezes is %.15f. Calculation time is %.15f seconds (wall clock). \n",maxThreads, maxTrapezes, finalResult, duration.count());
     return 0;
 }
