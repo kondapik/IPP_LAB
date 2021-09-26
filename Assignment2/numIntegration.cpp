@@ -7,6 +7,7 @@
 
 
 double finalResult;
+long token;
 std::mutex mutex;
 
 int helpText(char *program)
@@ -93,6 +94,41 @@ void *workerThread(long threadNo, long maxTrapezes, long size, long mod)
     return NULL;
 }
 
+void *workerThreadParts(long threadNo, long maxTrapezes, long maxTokens, long size)
+{
+    long startIdx, lastIdx, myToken;
+    double mySum = 0.0;
+
+    // std::cout << "Thread No: " << threadNo << std::endl;
+    double width = 1.0 / (double) maxTrapezes;
+
+    while (myToken < maxTokens)
+    {
+        mutex.lock();
+        myToken = token;
+        token++;
+        mutex.unlock();
+        if (myToken < maxTokens)
+        {
+            startIdx = myToken * size;
+            lastIdx = startIdx + size;
+
+            for(long threadIdx = startIdx; threadIdx < lastIdx; threadIdx++)
+            {
+                // std::cout << threadIdx << " ";
+                mySum = mySum + getArea(threadIdx, width);
+            }
+        }
+    }
+    
+    mutex.lock();
+    finalResult = finalResult + mySum;
+    mutex.unlock();
+    // std::cout << std::endl;
+
+    return NULL;
+}
+
 int main(int argc, char *argv[])
 {
     long maxThreads, maxTrapezes, maxParts = 1;
@@ -157,17 +193,26 @@ int main(int argc, char *argv[])
     // std::cout << "lastBlocks:\t" << lastBlocks << std::endl;
 
     finalResult = 0.0;
-
+    token = 0;
     std::thread *threadHandles = new std::thread[maxThreads];
 
     // *** Starting Timer ***
      auto start_time = std::chrono::system_clock::now();
 
-    for (long threadNo = 0; threadNo < maxThreads; threadNo++)
+    if (maxParts == 1)
     {
-        threadHandles[threadNo] = std::thread(workerThread,threadNo, maxTrapezes, blockSize, lastBlocks);
+        for (long threadNo = 0; threadNo < maxThreads; threadNo++)
+        {
+            threadHandles[threadNo] = std::thread(workerThread,threadNo, maxTrapezes, blockSize, lastBlocks);
+        }
+    } else
+    {
+        for (long threadNo = 0; threadNo < maxThreads; threadNo++)
+        {
+            threadHandles[threadNo] = std::thread(workerThreadParts,threadNo, maxTrapezes, maxTrapezes * maxParts, blockSize/maxParts);
+        }
     }
-
+    
     for (long threadNo = 0; threadNo < maxThreads; threadNo++)
     {
         threadHandles[threadNo].join();
