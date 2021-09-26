@@ -1,0 +1,18 @@
+Usage: ./numIntegration [optional command] T N [optional argument]
+
+numIntegration:
+Calculates the numerical integration of [4/(1 + x^2)] from 0 to 1 by summing up areas of trapezes.
+[0 1] is divided into 'N' trapezes and their areas are calculated and summed by 'T' threads parallely.
+
+{Implemented for testing different work distribution} -- Optional argument 'P' can be used to break each section of trapezes into smaller partitions. Threads can pickup blocks to calculation.
+
+Required Inputs: 
+  T	Number of Threads. (a natural number)
+  N	Number of Trapezes. (a natural number. N should be greater than or equal to T)
+
+Optional Argument: 
+  P	Number of Partitions. (a natural number. N should be greater than or equal to T*P)
+
+Optional Command: 
+  -h	Display this information.
+
