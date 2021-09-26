@@ -7,7 +7,10 @@ RM=rm all
 all: $(PROG).cpp
 	@g++ -std=c++11 -Wall -pthread $(PROG).cpp -o $(PROG)
 
+	@echo "\n";\
 	
+	@echo "Results of $(PROG) with 1 thread(s) and 1 trapeze(s) and 1 partition(s)"; \
+	./$(PROG) 1 1
 
 .PHONY: clean
 clean:
