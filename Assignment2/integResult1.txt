@@ -1,0 +1,81 @@
+#./numIntegration -h
+
+
+Results of numIntegration with 1 thread(s) and 1000 trapeze(s) and 1 partition(s)
+Result with 1 thread(s), 1000 trapeze(s) and 1 partition(s) is 3.141592486923129. Calculation time is 0.000307771000000 second(s) (wall clock). 
+Results of numIntegration with 1 thread(s) and 10000 trapeze(s) and 1 partition(s)
+Result with 1 thread(s), 10000 trapeze(s) and 1 partition(s) is 3.141592651923118. Calculation time is 0.000734418000000 second(s) (wall clock). 
+Results of numIntegration with 1 thread(s) and 1000000 trapeze(s) and 1 partition(s)
+Result with 1 thread(s), 1000000 trapeze(s) and 1 partition(s) is 3.141592653589718. Calculation time is 0.037899489000000 second(s) (wall clock). 
+Results of numIntegration with 1 thread(s) and 10000000 trapeze(s) and 1 partition(s)
+Result with 1 thread(s), 10000000 trapeze(s) and 1 partition(s) is 3.141592653590433. Calculation time is 0.323421379000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 2 thread(s) and 1000 trapeze(s) and 1 partition(s)
+Result with 2 thread(s), 1000 trapeze(s) and 1 partition(s) is 3.141592486923126. Calculation time is 0.000319866000000 second(s) (wall clock). 
+Results of numIntegration with 2 thread(s) and 10000 trapeze(s) and 1 partition(s)
+Result with 2 thread(s), 10000 trapeze(s) and 1 partition(s) is 3.141592651923136. Calculation time is 0.000600514000000 second(s) (wall clock). 
+Results of numIntegration with 2 thread(s) and 1000000 trapeze(s) and 1 partition(s)
+Result with 2 thread(s), 1000000 trapeze(s) and 1 partition(s) is 3.141592653589651. Calculation time is 0.020807748000000 second(s) (wall clock). 
+Results of numIntegration with 2 thread(s) and 10000000 trapeze(s) and 1 partition(s)
+Result with 2 thread(s), 10000000 trapeze(s) and 1 partition(s) is 3.141592653589603. Calculation time is 0.167718500000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 4 thread(s) and 1000 trapeze(s) and 1 partition(s)
+Result with 4 thread(s), 1000 trapeze(s) and 1 partition(s) is 3.141592486923127. Calculation time is 0.000545234000000 second(s) (wall clock). 
+Results of numIntegration with 4 thread(s) and 10000 trapeze(s) and 1 partition(s)
+Result with 4 thread(s), 10000 trapeze(s) and 1 partition(s) is 3.141592651923131. Calculation time is 0.000620931000000 second(s) (wall clock). 
+Results of numIntegration with 4 thread(s) and 1000000 trapeze(s) and 1 partition(s)
+Result with 4 thread(s), 1000000 trapeze(s) and 1 partition(s) is 3.141592653589663. Calculation time is 0.012922731000000 second(s) (wall clock). 
+Results of numIntegration with 4 thread(s) and 10000000 trapeze(s) and 1 partition(s)
+Result with 4 thread(s), 10000000 trapeze(s) and 1 partition(s) is 3.141592653589764. Calculation time is 0.086780942000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 8 thread(s) and 1000 trapeze(s) and 1 partition(s)
+Result with 8 thread(s), 1000 trapeze(s) and 1 partition(s) is 3.141592486923126. Calculation time is 0.001014095000000 second(s) (wall clock). 
+Results of numIntegration with 8 thread(s) and 10000 trapeze(s) and 1 partition(s)
+Result with 8 thread(s), 10000 trapeze(s) and 1 partition(s) is 3.141592651923129. Calculation time is 0.001165338000000 second(s) (wall clock). 
+Results of numIntegration with 8 thread(s) and 1000000 trapeze(s) and 1 partition(s)
+Result with 8 thread(s), 1000000 trapeze(s) and 1 partition(s) is 3.141592653589636. Calculation time is 0.011092548000000 second(s) (wall clock). 
+Results of numIntegration with 8 thread(s) and 10000000 trapeze(s) and 1 partition(s)
+Result with 8 thread(s), 10000000 trapeze(s) and 1 partition(s) is 3.141592653589764. Calculation time is 0.078257071000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 16 thread(s) and 1000 trapeze(s) and 1 partition(s)
+Result with 16 thread(s), 1000 trapeze(s) and 1 partition(s) is 3.141592486923127. Calculation time is 0.001349266000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 10000 trapeze(s) and 1 partition(s)
+Result with 16 thread(s), 10000 trapeze(s) and 1 partition(s) is 3.141592651923128. Calculation time is 0.001550365000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 1000000 trapeze(s) and 1 partition(s)
+Result with 16 thread(s), 1000000 trapeze(s) and 1 partition(s) is 3.141592653589627. Calculation time is 0.006476471000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 10000000 trapeze(s) and 1 partition(s)
+Result with 16 thread(s), 10000000 trapeze(s) and 1 partition(s) is 3.141592653589806. Calculation time is 0.042768256000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 32 thread(s) and 1000 trapeze(s) and 1 partition(s)
+Result with 32 thread(s), 1000 trapeze(s) and 1 partition(s) is 3.141592486923128. Calculation time is 0.001890711000000 second(s) (wall clock). 
+Results of numIntegration with 32 thread(s) and 10000 trapeze(s) and 1 partition(s)
+Result with 32 thread(s), 10000 trapeze(s) and 1 partition(s) is 3.141592651923128. Calculation time is 0.002165579000000 second(s) (wall clock). 
+Results of numIntegration with 32 thread(s) and 1000000 trapeze(s) and 1 partition(s)
+Result with 32 thread(s), 1000000 trapeze(s) and 1 partition(s) is 3.141592653589624. Calculation time is 0.006736723000000 second(s) (wall clock). 
+Results of numIntegration with 32 thread(s) and 10000000 trapeze(s) and 1 partition(s)
+Result with 32 thread(s), 10000000 trapeze(s) and 1 partition(s) is 3.141592653589802. Calculation time is 0.044533077000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 16 thread(s) and 10000 trapeze(s) and 100 partition(s)
+Result with 16 thread(s), 10000 trapeze(s) and 100 partition(s) is 3.059971329110420. Calculation time is 0.001621508000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 1000000 trapeze(s) and 100 partition(s)
+Result with 16 thread(s), 1000000 trapeze(s) and 100 partition(s) is 3.141592653589627. Calculation time is 0.006482846000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 10000000 trapeze(s) and 100 partition(s)
+Result with 16 thread(s), 10000000 trapeze(s) and 100 partition(s) is 3.141592653589788. Calculation time is 0.040932083000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 16 thread(s) and 1000000 trapeze(s) and 1000 partition(s)
+Result with 16 thread(s), 1000000 trapeze(s) and 1000 partition(s) is 3.125528482926248. Calculation time is 0.008317110000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 10000000 trapeze(s) and 1000 partition(s)
+Result with 16 thread(s), 10000000 trapeze(s) and 1000 partition(s) is 3.141592653589791. Calculation time is 0.040917897000000 second(s) (wall clock). 
+
+
+Results of numIntegration with 16 thread(s) and 1000000 trapeze(s) and 10000 partition(s)
+Result with 16 thread(s), 1000000 trapeze(s) and 10000 partition(s) is 3.059971330843463. Calculation time is 0.081337121000000 second(s) (wall clock). 
+Results of numIntegration with 16 thread(s) and 10000000 trapeze(s) and 10000 partition(s)
+Result with 16 thread(s), 10000000 trapeze(s) and 10000 partition(s) is 3.125528482926417. Calculation time is 0.077181250000000 second(s) (wall clock). 
