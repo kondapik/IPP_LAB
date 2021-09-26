@@ -209,7 +209,7 @@ int main(int argc, char *argv[])
     {
         for (long threadNo = 0; threadNo < maxThreads; threadNo++)
         {
-            threadHandles[threadNo] = std::thread(workerThreadParts,threadNo, maxTrapezes, maxTrapezes * maxParts, blockSize/maxParts);
+            threadHandles[threadNo] = std::thread(workerThreadParts,threadNo, maxTrapezes, maxThreads * maxParts, blockSize/maxParts);
         }
     }
     
