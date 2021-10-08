@@ -29,7 +29,7 @@ int helpText(char *program)
 
 int main(int argc, char *argv[])
 {
-    long maxThreads, maxNumber, maxParts = 1;
+    long maxThreads, maxNumber;
 
     // Print help text if '-h' argument is passed 
     if (argc == 1 || "-h" == std::string(argv[1]) || argc != 3)
@@ -117,6 +117,7 @@ int main(int argc, char *argv[])
     // for (auto it = finalPrimes.begin(); it != finalPrimes.end(); ++it)
     //     std::cout << ' ' << *it;
     // std::cout << std::endl;
-
+    
+    printf("Found %ld primes with %ld thread(s) and %ld maximum value in %.15f second(s) (wall clock). \n",finalPrimes.size(), maxThreads, maxNumber, duration);
     return 0;
 }
