@@ -1,0 +1,132 @@
+#
+# example Makefile to build an executable named myprog from myprog.cpp
+#
+PROG=GameOfLifeOMP
+RM=rm all
+
+all: $(PROG).cpp
+	@gcc -fopenmp $(PROG).cpp -o $(PROG)
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 1 thread(s), 64x64 array and 1000 steps"; \
+	./$(PROG) 1 64 1000
+
+	@echo "Results of $(PROG) with 1 thread(s), 1024x1024 array and 1000 steps"; \
+	./$(PROG) 1 1024 1000
+
+	@echo "Results of $(PROG) with 1 thread(s), 4096x4096 array and 1000 steps"; \
+	./$(PROG) 1 4096 1000
+
+	@echo "Results of $(PROG) with 1 thread(s), 64x64 array and 2000 steps"; \
+	./$(PROG) 1 64 2000
+
+	@echo "Results of $(PROG) with 1 thread(s), 1024x1024 array and 2000 steps"; \
+	./$(PROG) 1 1024 2000
+
+	@echo "Results of $(PROG) with 1 thread(s), 4096x4096 array and 2000 steps"; \
+	./$(PROG) 1 4096 2000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 2 thread(s), 64x64 array and 1000 steps"; \
+	./$(PROG) 2 64 1000
+
+	@echo "Results of $(PROG) with 2 thread(s), 1024x1024 array and 1000 steps"; \
+	./$(PROG) 2 1024 1000
+
+	@echo "Results of $(PROG) with 2 thread(s), 4096x4096 array and 1000 steps"; \
+	./$(PROG) 2 4096 1000
+
+	@echo "Results of $(PROG) with 2 thread(s), 64x64 array and 2000 steps"; \
+	./$(PROG) 2 64 2000
+
+	@echo "Results of $(PROG) with 2 thread(s), 1024x1024 array and 2000 steps"; \
+	./$(PROG) 2 1024 2000
+
+	@echo "Results of $(PROG) with 2 thread(s), 4096x4096 array and 2000 steps"; \
+	./$(PROG) 2 4096 2000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 4 thread(s), 64x64 array and 1000 steps"; \
+	./$(PROG) 4 64 1000
+
+	@echo "Results of $(PROG) with 4 thread(s), 1024x1024 array and 1000 steps"; \
+	./$(PROG) 4 1024 1000
+
+	@echo "Results of $(PROG) with 4 thread(s), 4096x4096 array and 1000 steps"; \
+	./$(PROG) 4 4096 1000
+
+	@echo "Results of $(PROG) with 4 thread(s), 64x64 array and 2000 steps"; \
+	./$(PROG) 4 64 2000
+
+	@echo "Results of $(PROG) with 4 thread(s), 1024x1024 array and 2000 steps"; \
+	./$(PROG) 4 1024 2000
+
+	@echo "Results of $(PROG) with 4 thread(s), 4096x4096 array and 2000 steps"; \
+	./$(PROG) 4 4096 2000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 8 thread(s), 64x64 array and 1000 steps"; \
+	./$(PROG) 8 64 1000
+
+	@echo "Results of $(PROG) with 8 thread(s), 1024x1024 array and 1000 steps"; \
+	./$(PROG) 8 1024 1000
+
+	@echo "Results of $(PROG) with 8 thread(s), 4096x4096 array and 1000 steps"; \
+	./$(PROG) 8 4096 1000
+
+	@echo "Results of $(PROG) with 8 thread(s), 64x64 array and 2000 steps"; \
+	./$(PROG) 8 64 2000
+
+	@echo "Results of $(PROG) with 8 thread(s), 1024x1024 array and 2000 steps"; \
+	./$(PROG) 8 1024 2000
+
+	@echo "Results of $(PROG) with 8 thread(s), 4096x4096 array and 2000 steps"; \
+	./$(PROG) 8 4096 2000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 16 thread(s), 64x64 array and 1000 steps"; \
+	./$(PROG) 16 64 1000
+
+	@echo "Results of $(PROG) with 16 thread(s), 1024x1024 array and 1000 steps"; \
+	./$(PROG) 16 1024 1000
+
+	@echo "Results of $(PROG) with 16 thread(s), 4096x4096 array and 1000 steps"; \
+	./$(PROG) 16 4096 1000
+
+	@echo "Results of $(PROG) with 16 thread(s), 64x64 array and 2000 steps"; \
+	./$(PROG) 16 64 2000
+
+	@echo "Results of $(PROG) with 16 thread(s), 1024x1024 array and 2000 steps"; \
+	./$(PROG) 16 1024 2000
+
+	@echo "Results of $(PROG) with 16 thread(s), 4096x4096 array and 2000 steps"; \
+	./$(PROG) 16 4096 2000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 32 thread(s), 64x64 array and 1000 steps"; \
+	./$(PROG) 32 64 1000
+
+	@echo "Results of $(PROG) with 32 thread(s), 1024x1024 array and 1000 steps"; \
+	./$(PROG) 32 1024 1000
+
+	@echo "Results of $(PROG) with 32 thread(s), 4096x4096 array and 1000 steps"; \
+	./$(PROG) 32 4096 1000
+
+	@echo "Results of $(PROG) with 32 thread(s), 64x64 array and 2000 steps"; \
+	./$(PROG) 32 64 2000
+
+	@echo "Results of $(PROG) with 32 thread(s), 1024x1024 array and 2000 steps"; \
+	./$(PROG) 32 1024 2000
+
+	@echo "Results of $(PROG) with 32 thread(s), 4096x4096 array and 2000 steps"; \
+	./$(PROG) 32 4096 2000
+
+.PHONY: clean
+clean:
+	$(RM) $(PROG)
