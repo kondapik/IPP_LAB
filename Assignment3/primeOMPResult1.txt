@@ -1,0 +1,104 @@
+
+
+Results of sievePrimesOMP with 1 thread(s) and 10000 max value
+Calculation Time: 0.00375225
+Found 1229 primes with 1 thread(s) and 10000 maximum value in 0.003752247983357 second(s) (wall clock). 
+Results of sievePrimesOMP with 1 thread(s) and 100000 max value
+Calculation Time: 0.0465925
+Found 9592 primes with 1 thread(s) and 100000 maximum value in 0.046592480997788 second(s) (wall clock). 
+Results of sievePrimesOMP with 1 thread(s) and 1000000 max value
+Calculation Time: 0.803228
+Found 78498 primes with 1 thread(s) and 1000000 maximum value in 0.803227573022014 second(s) (wall clock). 
+Results of sievePrimesOMP with 1 thread(s) and 10000000 max value
+Calculation Time: 16.0259
+Found 664579 primes with 1 thread(s) and 10000000 maximum value in 16.025928028015187 second(s) (wall clock). 
+Results of sievePrimesOMP with 1 thread(s) and 100000000 max value
+Calculation Time: 364.375
+Found 5761455 primes with 1 thread(s) and 100000000 maximum value in 364.374737479025498 second(s) (wall clock). 
+
+
+Results of sievePrimesOMP with 2 thread(s) and 10000 max value
+Calculation Time: 0.00204183
+Found 1229 primes with 2 thread(s) and 10000 maximum value in 0.002041831001407 second(s) (wall clock). 
+Results of sievePrimesOMP with 2 thread(s) and 100000 max value
+Calculation Time: 0.0257926
+Found 9592 primes with 2 thread(s) and 100000 maximum value in 0.025792568019824 second(s) (wall clock). 
+Results of sievePrimesOMP with 2 thread(s) and 1000000 max value
+Calculation Time: 0.407582
+Found 78498 primes with 2 thread(s) and 1000000 maximum value in 0.407582257001195 second(s) (wall clock). 
+Results of sievePrimesOMP with 2 thread(s) and 10000000 max value
+Calculation Time: 8.11641
+Found 664579 primes with 2 thread(s) and 10000000 maximum value in 8.116413814015687 second(s) (wall clock). 
+Results of sievePrimesOMP with 2 thread(s) and 100000000 max value
+Calculation Time: 183.641
+Found 5761455 primes with 2 thread(s) and 100000000 maximum value in 183.641021646995796 second(s) (wall clock). 
+
+
+Results of sievePrimesOMP with 4 thread(s) and 10000 max value
+Calculation Time: 0.00130505
+Found 1229 primes with 4 thread(s) and 10000 maximum value in 0.001305051991949 second(s) (wall clock). 
+Results of sievePrimesOMP with 4 thread(s) and 100000 max value
+Calculation Time: 0.0141998
+Found 9592 primes with 4 thread(s) and 100000 maximum value in 0.014199817000190 second(s) (wall clock). 
+Results of sievePrimesOMP with 4 thread(s) and 1000000 max value
+Calculation Time: 0.209613
+Found 78498 primes with 4 thread(s) and 1000000 maximum value in 0.209613012004411 second(s) (wall clock). 
+Results of sievePrimesOMP with 4 thread(s) and 10000000 max value
+Calculation Time: 4.15952
+Found 664579 primes with 4 thread(s) and 10000000 maximum value in 4.159523204987636 second(s) (wall clock). 
+Results of sievePrimesOMP with 4 thread(s) and 100000000 max value
+Calculation Time: 92.5186
+Found 5761455 primes with 4 thread(s) and 100000000 maximum value in 92.518597866990604 second(s) (wall clock). 
+
+
+Results of sievePrimesOMP with 8 thread(s) and 10000 max value
+Calculation Time: 0.00116811
+Found 1229 primes with 8 thread(s) and 10000 maximum value in 0.001168110000435 second(s) (wall clock). 
+Results of sievePrimesOMP with 8 thread(s) and 100000 max value
+Calculation Time: 0.00767044
+Found 9592 primes with 8 thread(s) and 100000 maximum value in 0.007670440012589 second(s) (wall clock). 
+Results of sievePrimesOMP with 8 thread(s) and 1000000 max value
+Calculation Time: 0.156434
+Found 78498 primes with 8 thread(s) and 1000000 maximum value in 0.156433572992682 second(s) (wall clock). 
+Results of sievePrimesOMP with 8 thread(s) and 10000000 max value
+Calculation Time: 2.28572
+Found 664579 primes with 8 thread(s) and 10000000 maximum value in 2.285723435023101 second(s) (wall clock). 
+Results of sievePrimesOMP with 8 thread(s) and 100000000 max value
+Calculation Time: 47.1171
+Found 5761455 primes with 8 thread(s) and 100000000 maximum value in 47.117099524999503 second(s) (wall clock). 
+
+
+Results of sievePrimesOMP with 16 thread(s) and 10000 max value
+Calculation Time: 0.00426771
+Found 1229 primes with 16 thread(s) and 10000 maximum value in 0.004267706011888 second(s) (wall clock). 
+Results of sievePrimesOMP with 16 thread(s) and 100000 max value
+Calculation Time: 0.00821346
+Found 9592 primes with 16 thread(s) and 100000 maximum value in 0.008213457011152 second(s) (wall clock). 
+Results of sievePrimesOMP with 16 thread(s) and 1000000 max value
+Calculation Time: 0.0816807
+Found 78498 primes with 16 thread(s) and 1000000 maximum value in 0.081680723989848 second(s) (wall clock). 
+#@echo "Results of sievePrimesOMP with 16 thread(s) and 10000000 max value"; \
+./sievePrimesOMP 16 10000000
+Calculation Time: 1.59618
+Found 664579 primes with 16 thread(s) and 10000000 maximum value in 1.596184228983475 second(s) (wall clock). 
+#@echo "Results of sievePrimesOMP with 16 thread(s) and 100000000 max value"; \
+./sievePrimesOMP 16 100000000
+Calculation Time: 36.8452
+Found 5761455 primes with 16 thread(s) and 100000000 maximum value in 36.845238481997512 second(s) (wall clock). 
+
+
+Results of sievePrimesOMP with 32 thread(s) and 10000 max value
+Calculation Time: 0.00345329
+Found 1229 primes with 32 thread(s) and 10000 maximum value in 0.003453285025898 second(s) (wall clock). 
+Results of sievePrimesOMP with 32 thread(s) and 100000 max value
+Calculation Time: 0.0101948
+Found 9592 primes with 32 thread(s) and 100000 maximum value in 0.010194828995736 second(s) (wall clock). 
+Results of sievePrimesOMP with 32 thread(s) and 1000000 max value
+Calculation Time: 0.0891536
+Found 78498 primes with 32 thread(s) and 1000000 maximum value in 0.089153610984795 second(s) (wall clock). 
+Results of sievePrimesOMP with 32 thread(s) and 10000000 max value
+Calculation Time: 1.6071
+Found 664579 primes with 32 thread(s) and 10000000 maximum value in 1.607101654983126 second(s) (wall clock). 
+Results of sievePrimesOMP with 32 thread(s) and 100000000 max value
+Calculation Time: 36.4954
+Found 5761455 primes with 32 thread(s) and 100000000 maximum value in 36.495392142998753 second(s) (wall clock). 
