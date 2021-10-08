@@ -114,9 +114,9 @@ int main(int argc, char *argv[])
 
     // Printing the Vector
     // sort(finalPrimes.begin(), finalPrimes.end());
-    for (auto it = finalPrimes.begin(); it != finalPrimes.end(); ++it)
-        std::cout << ' ' << *it;
-    std::cout << std::endl;
+    // for (auto it = finalPrimes.begin(); it != finalPrimes.end(); ++it)
+    //     std::cout << ' ' << *it;
+    // std::cout << std::endl;
 
     return 0;
 }
