@@ -4,7 +4,7 @@
 PROG=GameOfLifeOMP
 RM=rm all
 
-all: $(PROG).cpp
+all: $(PROG).c
 	@gcc -fopenmp $(PROG).c -o $(PROG)
 
 	@echo "\n";\
