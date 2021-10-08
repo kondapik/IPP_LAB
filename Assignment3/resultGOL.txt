@@ -1,0 +1,84 @@
+
+
+Results of GameOfLifeOMP with 1 thread(s), 64x64 array and 1000 steps
+GameOfLife: Threads 1 Size 64 Steps 1000 Time 0.106417
+Results of GameOfLifeOMP with 1 thread(s), 1024x1024 array and 1000 steps
+GameOfLife: Threads 1 Size 1024 Steps 1000 Time 27.900653
+Results of GameOfLifeOMP with 1 thread(s), 4096x4096 array and 1000 steps
+GameOfLife: Threads 1 Size 4096 Steps 1000 Time 449.243788
+Results of GameOfLifeOMP with 1 thread(s), 64x64 array and 2000 steps
+GameOfLife: Threads 1 Size 64 Steps 2000 Time 0.210419
+Results of GameOfLifeOMP with 1 thread(s), 1024x1024 array and 2000 steps
+GameOfLife: Threads 1 Size 1024 Steps 2000 Time 55.630017
+Results of GameOfLifeOMP with 1 thread(s), 4096x4096 array and 2000 steps
+GameOfLife: Threads 1 Size 4096 Steps 2000 Time 989.124459
+
+
+Results of GameOfLifeOMP with 2 thread(s), 64x64 array and 1000 steps
+GameOfLife: Threads 2 Size 64 Steps 1000 Time 0.067940
+Results of GameOfLifeOMP with 2 thread(s), 1024x1024 array and 1000 steps
+GameOfLife: Threads 2 Size 1024 Steps 1000 Time 16.227574
+Results of GameOfLifeOMP with 2 thread(s), 4096x4096 array and 1000 steps
+GameOfLife: Threads 2 Size 4096 Steps 1000 Time 283.582986
+Results of GameOfLifeOMP with 2 thread(s), 64x64 array and 2000 steps
+GameOfLife: Threads 2 Size 64 Steps 2000 Time 0.127349
+Results of GameOfLifeOMP with 2 thread(s), 1024x1024 array and 2000 steps
+GameOfLife: Threads 2 Size 1024 Steps 2000 Time 32.020287
+Results of GameOfLifeOMP with 2 thread(s), 4096x4096 array and 2000 steps
+GameOfLife: Threads 2 Size 4096 Steps 2000 Time 664.018555
+
+
+Results of GameOfLifeOMP with 4 thread(s), 64x64 array and 1000 steps
+GameOfLife: Threads 4 Size 64 Steps 1000 Time 0.049417
+Results of GameOfLifeOMP with 4 thread(s), 1024x1024 array and 1000 steps
+GameOfLife: Threads 4 Size 1024 Steps 1000 Time 13.587831
+Results of GameOfLifeOMP with 4 thread(s), 4096x4096 array and 1000 steps
+GameOfLife: Threads 4 Size 4096 Steps 1000 Time 203.334770
+Results of GameOfLifeOMP with 4 thread(s), 64x64 array and 2000 steps
+GameOfLife: Threads 4 Size 64 Steps 2000 Time 0.086399
+Results of GameOfLifeOMP with 4 thread(s), 1024x1024 array and 2000 steps
+GameOfLife: Threads 4 Size 1024 Steps 2000 Time 23.194052
+Results of GameOfLifeOMP with 4 thread(s), 4096x4096 array and 2000 steps
+GameOfLife: Threads 4 Size 4096 Steps 2000 Time 387.405837
+
+
+Results of GameOfLifeOMP with 8 thread(s), 64x64 array and 1000 steps
+GameOfLife: Threads 8 Size 64 Steps 1000 Time 0.044489
+Results of GameOfLifeOMP with 8 thread(s), 1024x1024 array and 1000 steps
+GameOfLife: Threads 8 Size 1024 Steps 1000 Time 11.243506
+Results of GameOfLifeOMP with 8 thread(s), 4096x4096 array and 1000 steps
+GameOfLife: Threads 8 Size 4096 Steps 1000 Time 178.268721
+Results of GameOfLifeOMP with 8 thread(s), 64x64 array and 2000 steps
+GameOfLife: Threads 8 Size 64 Steps 2000 Time 0.085612
+Results of GameOfLifeOMP with 8 thread(s), 1024x1024 array and 2000 steps
+GameOfLife: Threads 8 Size 1024 Steps 2000 Time 21.451881
+Results of GameOfLifeOMP with 8 thread(s), 4096x4096 array and 2000 steps
+GameOfLife: Threads 8 Size 4096 Steps 2000 Time 371.631225
+
+
+Results of GameOfLifeOMP with 16 thread(s), 64x64 array and 1000 steps
+GameOfLife: Threads 16 Size 64 Steps 1000 Time 0.037030
+Results of GameOfLifeOMP with 16 thread(s), 1024x1024 array and 1000 steps
+GameOfLife: Threads 16 Size 1024 Steps 1000 Time 9.144284
+Results of GameOfLifeOMP with 16 thread(s), 4096x4096 array and 1000 steps
+GameOfLife: Threads 16 Size 4096 Steps 1000 Time 138.794602
+Results of GameOfLifeOMP with 16 thread(s), 64x64 array and 2000 steps
+GameOfLife: Threads 16 Size 64 Steps 2000 Time 0.069729
+Results of GameOfLifeOMP with 16 thread(s), 1024x1024 array and 2000 steps
+GameOfLife: Threads 16 Size 1024 Steps 2000 Time 18.593896
+Results of GameOfLifeOMP with 16 thread(s), 4096x4096 array and 2000 steps
+GameOfLife: Threads 16 Size 4096 Steps 2000 Time 262.363085
+
+
+Results of GameOfLifeOMP with 32 thread(s), 64x64 array and 1000 steps
+GameOfLife: Threads 32 Size 64 Steps 1000 Time 0.120195
+Results of GameOfLifeOMP with 32 thread(s), 1024x1024 array and 1000 steps
+GameOfLife: Threads 32 Size 1024 Steps 1000 Time 9.560541
+Results of GameOfLifeOMP with 32 thread(s), 4096x4096 array and 1000 steps
+GameOfLife: Threads 32 Size 4096 Steps 1000 Time 133.583809
+Results of GameOfLifeOMP with 32 thread(s), 64x64 array and 2000 steps
+GameOfLife: Threads 32 Size 64 Steps 2000 Time 0.238686
+Results of GameOfLifeOMP with 32 thread(s), 1024x1024 array and 2000 steps
+GameOfLife: Threads 32 Size 1024 Steps 2000 Time 18.967436
+Results of GameOfLifeOMP with 32 thread(s), 4096x4096 array and 2000 steps
+GameOfLife: Threads 32 Size 4096 Steps 2000 Time 280.966502
