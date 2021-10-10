@@ -16,6 +16,7 @@ void init(int arr[][DIM]) {                                              //Initi
     for (int i = 0; i <DIM; i++){
         for(int k = 0; k < DIM; k++){
             arr[i][k] = rand();
+            c[i][k] = 0;
         }
     }
 }
@@ -31,11 +32,11 @@ int main (){
         
 
         start_time = omp_get_wtime();
-        #pragma omp for schedule(static)
+        #pragma omp for schedule(static) collapse (3)
         for (i = 0; i < DIM; i++) {
             for (j = 0; j < DIM; j++) {
-                c[i][j] = 0;
                 for (k = 0; k < DIM; k++) {
+                #pragma omp atomic     
                     c[i][j] += a[i][k] * b[k][j];
                 }
             }
@@ -43,5 +44,5 @@ int main (){
     }
     run_time = omp_get_wtime() - start_time;
     //printf("Multiplication complete for DIM %d in %lf seconds\n ",DIM,run_time);
-   printf("%lf seconds\n ",run_time);
+    printf("%lf seconds\n ",run_time);
 }

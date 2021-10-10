@@ -31,7 +31,7 @@ int main (){
         
 
         start_time = omp_get_wtime();
-        #pragma omp for schedule(static)
+        #pragma omp for schedule(static) collapse(2)
         for (i = 0; i < DIM; i++) {
             for (j = 0; j < DIM; j++) {
                 c[i][j] = 0;
@@ -43,5 +43,5 @@ int main (){
     }
     run_time = omp_get_wtime() - start_time;
     //printf("Multiplication complete for DIM %d in %lf seconds\n ",DIM,run_time);
-   printf("%lf seconds\n ",run_time);
+    printf("%lf seconds\n ",run_time);
 }
