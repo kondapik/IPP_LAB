@@ -80,7 +80,7 @@ int main (int argc, char *argv[])
 {
     long maxNumber, maxSqrtValue, remValues, blockSize, lastBlocks;
     double elapsedTime;
-    int rank, worldSize;
+    int rank, worldSize, seedSize;
 
     // Initializing MPI
     MPI_Init(&argc, &argv);
@@ -124,7 +124,7 @@ int main (int argc, char *argv[])
     if (rank == 0){
         // *** Finding Seeds ***
         //Filling vector with natural number sequence starting from 2
-        std::iota (std::begin(seeds), std::end(seeds), 2);
+        std::iota (seeds.begin(), seeds.end(), 2);
 
         std::vector<long>::iterator findVal;
         long currNumber = 2;
@@ -155,7 +155,8 @@ int main (int argc, char *argv[])
             for (int i = 1; i < worldSize; i++)
             {
                 // sending the size of vector with tag 0 and the vector with tag 1
-                MPI_Send(seeds.size(), 1, MPI_INT, i, 0, MPI_COMM_WORLD);
+                seedSize = seeds.size();
+                MPI_Send(&seedSize, 1, MPI_INT, i, 0, MPI_COMM_WORLD);
                 MPI_Send(&seeds[0], seeds.size(), MPI_LONG_INT, i, 1, MPI_COMM_WORLD);
             }
 
@@ -167,10 +168,10 @@ int main (int argc, char *argv[])
 
         elapsedTime =+ MPI_Wtime();
         
-        printf("Found %ld primes with %ld thread(s) and %ld maximum value in %.15f second(s) (wall clock). \n",finalPrimes, worldSize, maxNumber, elapsedTime);
+        printf("Found %ld primes with %d thread(s) and %ld maximum value in %.15f second(s) (wall clock). \n",finalPrimes, worldSize, maxNumber, elapsedTime);
     } else
     {
-        int seedSize;
+        
         MPI_Recv(&seedSize, 1,  MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
         seeds.resize (seedSize);
