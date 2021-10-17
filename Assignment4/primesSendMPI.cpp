@@ -175,7 +175,7 @@ int main (int argc, char *argv[])
         MPI_Recv(&seedSize, 1,  MPI_INT, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
         seeds.resize (seedSize);
-        MPI_Recv(&seeds[0], seedSize, MPI_INT, 0, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        MPI_Recv(&seeds[0], seedSize, MPI_LONG_INT, 0, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         
         blockSize = remValues / (worldSize - 1);
         lastBlocks = remValues % (worldSize - 1);
