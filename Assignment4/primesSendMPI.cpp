@@ -84,10 +84,6 @@ int main (int argc, char *argv[])
 
     // Initializing MPI
     MPI_Init(&argc, &argv);
-
-    // Starting timer
-    MPI_Barrier(MPI_COMM_WORLD);
-    elapsedTime =- MPI_Wtime();
     
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &worldSize);
@@ -122,6 +118,8 @@ int main (int argc, char *argv[])
 
 
     if (rank == 0){
+        elapsedTime =- MPI_Wtime();
+
         // *** Finding Seeds ***
         //Filling vector with natural number sequence starting from 2
         std::iota (seeds.begin(), seeds.end(), 2);
@@ -163,6 +161,7 @@ int main (int argc, char *argv[])
             for (int i = 1; i < worldSize; i++) {
                 MPI_Recv(&localPrimes, 1,  MPI_LONG_INT, MPI_ANY_SOURCE, 2, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 finalPrimes =+ localPrimes;
+                printf("localPrimes:  %d, finalPrimes %d", localPrimes, finalPrimes);
             }
         }
 
