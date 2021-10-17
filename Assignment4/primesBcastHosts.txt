@@ -1,0 +1,13 @@
+\n
+Results of primesBcastMPI with 10000 max value
+Found 1204 primes with 96 thread(s) and 10000 maximum value in 0.044085025787354 second(s) (wall clock). 
+Results of primesBcastMPI with 100000 max value
+Found 9527 primes with 96 thread(s) and 100000 maximum value in 0.045529127120972 second(s) (wall clock). 
+Results of primesBcastMPI with 1000000 max value
+Found 78330 primes with 96 thread(s) and 1000000 maximum value in 0.056274890899658 second(s) (wall clock). 
+Results of primesBcastMPI with 10000000 max value
+Found 664133 primes with 96 thread(s) and 10000000 maximum value in 0.477421045303345 second(s) (wall clock). 
+Results of primesBcastMPI with 100000000 max value
+Found 5760226 primes with 96 thread(s) and 100000000 maximum value in 7.586518049240112 second(s) (wall clock). 
+Results of primesBcastMPI with 1000000000 max value
+Found 29488250 primes with 96 thread(s) and 1000000000 maximum value in 268.232537031173706 second(s) (wall clock). 
