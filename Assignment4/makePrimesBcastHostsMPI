@@ -1,0 +1,32 @@
+#
+# example Makefile to build an executable named myprog from myprog.cpp
+#
+PROG=primesBcastMPI
+RM=rm all
+
+all: $(PROG).cpp
+	@mpic++ -std=c++0x $(PROG).cpp -o $(PROG)
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 10000 max value"; \
+	mpiexec --hostfile hosts ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 100000 max value"; \
+	mpiexec --hostfile hosts ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 1000000 max value"; \
+	mpiexec --hostfile hosts ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 10000000 max value"; \
+	mpiexec --hostfile hosts ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 100000000 max value"; \
+	mpiexec --hostfile hosts ./$(PROG) 100000000
+
+	@echo "Results of $(PROG) with 1000000000 max value"; \
+	mpiexec --hostfile hosts ./$(PROG) 1000000000
+
+.PHONY: clean
+clean:
+	$(RM) $(PROG)
