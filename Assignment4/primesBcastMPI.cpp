@@ -156,7 +156,7 @@ int main (int argc, char *argv[])
             MPI_Bcast(&seeds[0], seeds.size(), MPI_LONG_INT, 0, MPI_COMM_WORLD);
             
 
-            MPI_Reduce(&localPrimes, &finalPrimes, 1, MPI_LONG_INT, MPI_SUM, 0, MPI_COMM_WORLD);
+            MPI_Reduce(&localPrimes, &finalPrimes, 1, MPI_FLOAT, MPI_SUM, 0, MPI_COMM_WORLD);
         }
 
         elapsedTime += MPI_Wtime();
@@ -175,7 +175,7 @@ int main (int argc, char *argv[])
 
         localPrimes = workerThread(rank - 1, maxNumber, maxSqrtValue, seeds, blockSize, lastBlocks);
 
-        MPI_Send(&localPrimes, 1, MPI_LONG_INT, 0, 2, MPI_COMM_WORLD);
+        MPI_Reduce(&localPrimes, &finalPrimes, 1, MPI_FLOAT, MPI_SUM, 0, MPI_COMM_WORLD);
     }
 
     MPI_Finalize();
