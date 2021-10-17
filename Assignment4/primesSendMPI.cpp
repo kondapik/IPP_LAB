@@ -6,7 +6,6 @@
 #include <bits/stdc++.h>
 #include <mpi.h>
 
-std::vector<long> localPrimes;
 long finalPrimes;
 long localPrimes;
 
@@ -84,11 +83,11 @@ int main (int argc, char *argv[])
     int rank, worldSize;
 
     // Initializing MPI
-    MPI_Init(&argc, &argv[]);
+    MPI_Init(&argc, &argv);
 
     // Starting timer
     MPI_Barrier(MPI_COMM_WORLD);
-    elapsedTime = - MPI_Wtime();
+    elapsedTime =- MPI_Wtime();
     
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &worldSize);
@@ -150,7 +149,7 @@ int main (int argc, char *argv[])
 
         if (worldSize == 1){
             // executing remaining values in a single thread
-            finalPrimes += workerThread(0, maxNumber, maxSqrtValue, seeds, remValues, 0);
+            finalPrimes =+ workerThread(0, maxNumber, maxSqrtValue, seeds, remValues, 0);
         }else
         {
             for (int i = 1; i < worldSize; i++)
@@ -162,11 +161,11 @@ int main (int argc, char *argv[])
 
             for (int i = 1; i < worldSize; i++) {
                 MPI_Recv(&localPrimes, 1,  MPI_LONG_INT, MPI_ANY_SOURCE, 2, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                finalPrimes += localPrimes;
+                finalPrimes =+ localPrimes;
             }
         }
 
-        elapsedTime += MPI_Wtime();
+        elapsedTime =+ MPI_Wtime();
         
         printf("Found %ld primes with %ld thread(s) and %ld maximum value in %.15f second(s) (wall clock). \n",finalPrimes, worldSize, maxNumber, elapsedTime);
     } else
