@@ -161,7 +161,7 @@ int main (int argc, char *argv[])
             for (int i = 1; i < worldSize; i++) {
                 MPI_Recv(&localPrimes, 1,  MPI_LONG_INT, MPI_ANY_SOURCE, 2, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
                 finalPrimes += localPrimes;
-                printf("localPrimes:  %d, finalPrimes %d\n", localPrimes, finalPrimes);
+                //printf("localPrimes:  %d, finalPrimes %d\n", localPrimes, finalPrimes);
             }
         }
 
