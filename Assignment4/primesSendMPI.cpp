@@ -118,7 +118,7 @@ int main (int argc, char *argv[])
 
 
     if (rank == 0){
-        elapsedTime =- MPI_Wtime();
+        elapsedTime -= MPI_Wtime();
 
         // *** Finding Seeds ***
         //Filling vector with natural number sequence starting from 2
@@ -147,7 +147,7 @@ int main (int argc, char *argv[])
 
         if (worldSize == 1){
             // executing remaining values in a single thread
-            finalPrimes =+ workerThread(0, maxNumber, maxSqrtValue, seeds, remValues, 0);
+            finalPrimes += workerThread(0, maxNumber, maxSqrtValue, seeds, remValues, 0);
         }else
         {
             for (int i = 1; i < worldSize; i++)
@@ -160,12 +160,12 @@ int main (int argc, char *argv[])
 
             for (int i = 1; i < worldSize; i++) {
                 MPI_Recv(&localPrimes, 1,  MPI_LONG_INT, MPI_ANY_SOURCE, 2, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-                finalPrimes =+ localPrimes;
-                printf("localPrimes:  %d, finalPrimes %d", localPrimes, finalPrimes);
+                finalPrimes += localPrimes;
+                printf("localPrimes:  %d, finalPrimes %d\n", localPrimes, finalPrimes);
             }
         }
 
-        elapsedTime =+ MPI_Wtime();
+        elapsedTime += MPI_Wtime();
         
         printf("Found %ld primes with %d thread(s) and %ld maximum value in %.15f second(s) (wall clock). \n",finalPrimes, worldSize, maxNumber, elapsedTime);
     } else
