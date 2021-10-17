@@ -1,0 +1,79 @@
+\n
+Results of primesSendMPI with 1 thread(s) and 10000 max value
+Found 1229 primes with 1 thread(s) and 10000 maximum value in 0.002779006958008 second(s) (wall clock). 
+Results of primesSendMPI with 1 thread(s) and 100000 max value
+Found 9592 primes with 1 thread(s) and 100000 maximum value in 0.128889083862305 second(s) (wall clock). 
+Results of primesSendMPI with 1 thread(s) and 1000000 max value
+Found 78498 primes with 1 thread(s) and 1000000 maximum value in 1.854749917984009 second(s) (wall clock). 
+Results of primesSendMPI with 1 thread(s) and 10000000 max value
+Found 664579 primes with 1 thread(s) and 10000000 maximum value in 24.605628013610840 second(s) (wall clock). 
+Results of primesSendMPI with 1 thread(s) and 100000000 max value
+Found 5761455 primes with 1 thread(s) and 100000000 maximum value in 378.701184034347534 second(s) (wall clock). 
+\n
+Results of primesSendMPI with 2 thread(s) and 10000 max value
+Found 1229 primes with 2 thread(s) and 10000 maximum value in 0.002297878265381 second(s) (wall clock). 
+Results of primesSendMPI with 2 thread(s) and 100000 max value
+Found 9592 primes with 2 thread(s) and 100000 maximum value in 0.044432878494263 second(s) (wall clock). 
+Results of primesSendMPI with 2 thread(s) and 1000000 max value
+Found 78498 primes with 2 thread(s) and 1000000 maximum value in 0.714780092239380 second(s) (wall clock). 
+Results of primesSendMPI with 2 thread(s) and 10000000 max value
+Found 664579 primes with 2 thread(s) and 10000000 maximum value in 15.655452966690063 second(s) (wall clock). 
+Results of primesSendMPI with 2 thread(s) and 100000000 max value
+Found 5761455 primes with 2 thread(s) and 100000000 maximum value in 373.070168972015381 second(s) (wall clock). 
+\n
+Results of primesSendMPI with 4 thread(s) and 10000 max value
+Found 1229 primes with 4 thread(s) and 10000 maximum value in 0.000962972640991 second(s) (wall clock). 
+Results of primesSendMPI with 4 thread(s) and 100000 max value
+Found 9592 primes with 4 thread(s) and 100000 maximum value in 0.034691095352173 second(s) (wall clock). 
+Results of primesSendMPI with 4 thread(s) and 1000000 max value
+Found 78498 primes with 4 thread(s) and 1000000 maximum value in 0.257375955581665 second(s) (wall clock). 
+Results of primesSendMPI with 4 thread(s) and 10000000 max value
+Found 664579 primes with 4 thread(s) and 10000000 maximum value in 5.220125913619995 second(s) (wall clock). 
+Results of primesSendMPI with 4 thread(s) and 100000000 max value
+Found 5761455 primes with 4 thread(s) and 100000000 maximum value in 123.149451017379761 second(s) (wall clock). 
+\n
+Results of primesSendMPI with 8 thread(s) and 10000 max value
+Found 1229 primes with 8 thread(s) and 10000 maximum value in 0.000572919845581 second(s) (wall clock). 
+Results of primesSendMPI with 8 thread(s) and 100000 max value
+Found 9592 primes with 8 thread(s) and 100000 maximum value in 0.006333827972412 second(s) (wall clock). 
+Results of primesSendMPI with 8 thread(s) and 1000000 max value
+Found 78498 primes with 8 thread(s) and 1000000 maximum value in 0.116636991500854 second(s) (wall clock). 
+Results of primesSendMPI with 8 thread(s) and 10000000 max value
+Found 664579 primes with 8 thread(s) and 10000000 maximum value in 2.353024959564209 second(s) (wall clock). 
+Results of primesSendMPI with 8 thread(s) and 100000000 max value
+Found 5761455 primes with 8 thread(s) and 100000000 maximum value in 56.758498191833496 second(s) (wall clock). 
+\n
+Results of primesSendMPI with 16 thread(s) and 10000 max value
+Found 1229 primes with 16 thread(s) and 10000 maximum value in 0.000854015350342 second(s) (wall clock). 
+Results of primesSendMPI with 16 thread(s) and 100000 max value
+Found 9592 primes with 16 thread(s) and 100000 maximum value in 0.003619909286499 second(s) (wall clock). 
+Results of primesSendMPI with 16 thread(s) and 1000000 max value
+Found 78498 primes with 16 thread(s) and 1000000 maximum value in 0.059267997741699 second(s) (wall clock). 
+#@echo "Results of primesSendMPI with 16 thread(s) and 10000000 max value"; \
+	mpiexec -n 16 ./primesSendMPI 10000000
+Found 664579 primes with 16 thread(s) and 10000000 maximum value in 1.213459968566895 second(s) (wall clock). 
+#@echo "Results of primesSendMPI with 16 thread(s) and 100000000 max value"; \
+	mpiexec -n 16 ./primesSendMPI 100000000
+Found 5761455 primes with 16 thread(s) and 100000000 maximum value in 27.308198928833008 second(s) (wall clock). 
+\n
+Results of primesSendMPI with 32 thread(s) and 10000 max value
+Found 1229 primes with 32 thread(s) and 10000 maximum value in 0.002141952514648 second(s) (wall clock). 
+Results of primesSendMPI with 32 thread(s) and 100000 max value
+Found 9592 primes with 32 thread(s) and 100000 maximum value in 0.041381120681763 second(s) (wall clock). 
+Results of primesSendMPI with 32 thread(s) and 1000000 max value
+Found 78498 primes with 32 thread(s) and 1000000 maximum value in 0.048508882522583 second(s) (wall clock). 
+Results of primesSendMPI with 32 thread(s) and 10000000 max value
+Found 664579 primes with 32 thread(s) and 10000000 maximum value in 0.832862854003906 second(s) (wall clock). 
+Results of primesSendMPI with 32 thread(s) and 100000000 max value
+Found 5761455 primes with 32 thread(s) and 100000000 maximum value in 15.475359916687012 second(s) (wall clock). 
+\n
+Results of primesSendMPI with 64 thread(s) and 10000 max value
+Found 1229 primes with 64 thread(s) and 10000 maximum value in 0.040745973587036 second(s) (wall clock). 
+Results of primesSendMPI with 64 thread(s) and 100000 max value
+Found 9592 primes with 64 thread(s) and 100000 maximum value in 0.010936975479126 second(s) (wall clock). 
+Results of primesSendMPI with 64 thread(s) and 1000000 max value
+Found 78498 primes with 64 thread(s) and 1000000 maximum value in 0.092029809951782 second(s) (wall clock). 
+Results of primesSendMPI with 64 thread(s) and 10000000 max value
+Found 664579 primes with 64 thread(s) and 10000000 maximum value in 1.495423793792725 second(s) (wall clock). 
+Results of primesSendMPI with 64 thread(s) and 100000000 max value
+Found 5761455 primes with 64 thread(s) and 100000000 maximum value in 17.330159902572632 second(s) (wall clock). 
