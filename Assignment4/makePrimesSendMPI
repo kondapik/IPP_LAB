@@ -1,0 +1,131 @@
+#
+# example Makefile to build an executable named myprog from myprog.cpp
+#
+PROG=primesSendMPI
+RM=rm all
+
+all: $(PROG).cpp
+	@mpic++ -std=c++0x $(PROG).cpp -o $(PROG)
+
+	@echo "\n";\
+
+	@echo "Results of $(PROG) with 1 thread(s) and 10000 max value"; \
+	mpiexec -n 1 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 1 thread(s) and 100000 max value"; \
+	mpiexec -n 1 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 1 thread(s) and 1000000 max value"; \
+	mpiexec -n 1 ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 1 thread(s) and 10000000 max value"; \
+	mpiexec -n 1 ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 1 thread(s) and 100000000 max value"; \
+	mpiexec -n 1 ./$(PROG) 100000000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 2 thread(s) and 10000 max value"; \
+	mpiexec -n 2 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 2 thread(s) and 100000 max value"; \
+	mpiexec -n 2 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 2 thread(s) and 1000000 max value"; \
+	mpiexec -n 2 ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 2 thread(s) and 10000000 max value"; \
+	mpiexec -n 2 ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 2 thread(s) and 100000000 max value"; \
+	mpiexec -n 2 ./$(PROG) 100000000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 4 thread(s) and 10000 max value"; \
+	mpiexec -n 4 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 4 thread(s) and 100000 max value"; \
+	mpiexec -n 4 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 4 thread(s) and 1000000 max value"; \
+	mpiexec -n 4 ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 4 thread(s) and 10000000 max value"; \
+	mpiexec -n 4 ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 4 thread(s) and 100000000 max value"; \
+	mpiexec -n 4 ./$(PROG) 100000000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 8 thread(s) and 10000 max value"; \
+	mpiexec -n 8 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 8 thread(s) and 100000 max value"; \
+	mpiexec -n 8 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 8 thread(s) and 1000000 max value"; \
+	mpiexec -n 8 ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 8 thread(s) and 10000000 max value"; \
+	mpiexec -n 8 ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 8 thread(s) and 100000000 max value"; \
+	mpiexec -n 8 ./$(PROG) 100000000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 16 thread(s) and 10000 max value"; \
+	mpiexec -n 16 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 16 thread(s) and 100000 max value"; \
+	mpiexec -n 16 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 16 thread(s) and 1000000 max value"; \
+	mpiexec -n 16 ./$(PROG) 1000000
+
+	#@echo "Results of $(PROG) with 16 thread(s) and 10000000 max value"; \
+	mpiexec -n 16 ./$(PROG) 10000000
+
+	#@echo "Results of $(PROG) with 16 thread(s) and 100000000 max value"; \
+	mpiexec -n 16 ./$(PROG) 100000000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 32 thread(s) and 10000 max value"; \
+	mpiexec -n 32 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 32 thread(s) and 100000 max value"; \
+	mpiexec -n 32 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 32 thread(s) and 1000000 max value"; \
+	mpiexec -n 32 ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 32 thread(s) and 10000000 max value"; \
+	mpiexec -n 32 ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 32 thread(s) and 100000000 max value"; \
+	mpiexec -n 32 ./$(PROG) 100000000
+
+	@echo "\n";\
+	
+	@echo "Results of $(PROG) with 64 thread(s) and 10000 max value"; \
+	mpiexec -n 64 ./$(PROG) 10000
+
+	@echo "Results of $(PROG) with 64 thread(s) and 100000 max value"; \
+	mpiexec -n 64 ./$(PROG) 100000
+
+	@echo "Results of $(PROG) with 64 thread(s) and 1000000 max value"; \
+	mpiexec -n 64 ./$(PROG) 1000000
+
+	@echo "Results of $(PROG) with 64 thread(s) and 10000000 max value"; \
+	mpiexec -n 64 ./$(PROG) 10000000
+
+	@echo "Results of $(PROG) with 64 thread(s) and 100000000 max value"; \
+	mpiexec -n 64 ./$(PROG) 100000000
+
+.PHONY: clean
+clean:
+	$(RM) $(PROG)
